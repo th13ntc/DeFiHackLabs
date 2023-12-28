@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-333 incidents included.
+335 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -34,9 +34,13 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 
 ## List of Past DeFi Incidents
 
-[20231220 TransitFinance](#20231220-transitfinance---lack-of-validation-pool) 
+[20231222 PineProtocol](#20231222-pineprotocol---business-logic-flaw)
+
+[20231220 TransitFinance](#20231220-transitfinance---lack-of-validation-pool)
 
 [20231217 FloorProtocol](#20231217-floorprotocol---business-logic-flaw)
+
+[20231216 NFTTrader](#20231216-nfttrader---reentrancy)
 
 [20231213 HYPR](#20231213-hypr---business-logic-flaw)
 
@@ -736,6 +740,27 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 
 ### List of DeFi Hacks & POCs
 
+### 20231222 PineProtocol - Business Logic Flaw
+
+### Lost: ~90k
+
+```
+forge test --contracts ./src/test/PineProtocol_exp.sol -vvv
+
+```
+
+#### Contract
+
+[PineProtocol_exp.sol](src/test/PineProtocol_exp.sol)
+
+#### Link reference
+
+https://medium.com/neptune-mutual/analysis-of-the-pine-protocol-exploit-e09dbcb80ca0
+
+https://twitter.com/MistTrack_io/status/1738131780459430338
+
+---
+
 ### 20231220 TransitFinance - Lack of Validation Pool
 
 ### Lost: ~110k
@@ -774,6 +799,28 @@ https://protos.com/floor-protocol-exploited-bored-apes-and-pudgy-penguins-gone/
 https://twitter.com/0xfoobar/status/1736190355257627064
 
 https://defimon.xyz/exploit/mainnet/0x7e5433f02f4bf07c4f2a2d341c450e07d7531428
+
+---
+
+### 20231216 NFTTrader - Reentrancy
+
+### Lost: ~$3M
+
+```
+forge test --contracts ./src/test/NFTTrader_exp.sol -vvv
+```
+
+#### Contract
+
+[NFTTrader_exp.sol](src/test/NFTTrader_exp.sol)
+
+#### Link reference
+
+https://twitter.com/AnciliaInc/status/1736263884217139333
+
+https://twitter.com/SlowMist_Team/status/1736005523550646535
+
+https://twitter.com/0xArhat/status/1736038250190651467
 
 ---
 
@@ -976,17 +1023,16 @@ https://x.com/phalcon_xyz/status/1725058908144746992
 Test
 
 ```
-forge test --contracts ./src/test/OKC_exp.sol -vvv
+forge test --contracts ./src/test/2023-11/OKC_exp.sol -vvv
 ```
 
 #### Contract
 
-[OKC_exp.sol](src/test/OKC_exp.sol)
+[OKC_exp.sol](src/test/2023-11/OKC_exp.sol)
 
 #### Link Reference
 
 https://lunaray.medium.com/okc-project-hack-analysis-0907312f519b
-
 
 ---
 
