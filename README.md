@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-342 incidents included.
+343 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -33,6 +33,7 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 - Lesson 7: Hack Analysis: Nomad Bridge, August 2022 ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/) )
 
 ## List of Past DeFi Incidents
+[20240117 SocketGateway](#20240117-socketgateway---lack-of-calldata-validation)
 
 [20240112 WiseLending](#20240112-wiselending---loss-of-precision)
 
@@ -750,6 +751,26 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 
 ### List of DeFi Hacks & POCs
 
+### 20240112 SocketGateway - Lack of calldata validation
+
+### Lost: ~3.3Million $
+
+```
+forge test --contracts ./src/test/SocketGateway_exp.sol -vvv --evm-version shanghai
+```
+
+#### Contract
+
+[SocketGateway_exp.sol](src/test/SocketGateway_exp.sol)
+
+#### Link reference
+
+https://twitter.com/BeosinAlert/status/1747450173675196674
+
+https://twitter.com/peckshield/status/1747353782004900274
+
+---
+
 ### 20240112 WiseLending - Loss of Precision
 
 ### Lost: ~464K
@@ -764,7 +785,7 @@ forge test --contracts ./src/test/WiseLending02_exp.sol -vvv --evm-version shang
 
 #### Link reference
 
-https://twitter.com/EXVULSEC/status/1746138811862577515
+https://twitter.com/MetaTrustAlert/status/1746070784471380092
 
 https://twitter.com/peckshield/status/1745907642118123774
 
