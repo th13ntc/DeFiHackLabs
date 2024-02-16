@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-348 incidents included.
+352 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -33,6 +33,8 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 - Lesson 7: Hack Analysis: Nomad Bridge, August 2022 ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/) )
 
 ## List of Past DeFi Incidents
+
+[20240216 ParticleTrade](#20240216-ParticleTrade---lack-of-validation-data)
 
 [20240215 Miner](#20240215-Miner---lack-of-validation-dst-address)
 
@@ -767,6 +769,24 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 ---
 
 ### List of DeFi Hacks & POCs
+
+### 20240216 ParticleTrade - lack of validation data
+
+### Lost: ~50k
+
+```
+forge test --contracts ./src/test/ParticleTrade_exp.sol -vvv
+```
+
+#### Contract
+
+[ParticleTrade_exp.sol](src/test/ParticleTrade_exp.sol)
+
+#### Link reference
+
+https://twitter.com/Phalcon_xyz/status/1758028270770250134
+
+---
 
 ### 20240215 Miner - lack of validation dst address
 
