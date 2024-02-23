@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-355 incidents included.
+357 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -33,6 +33,10 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 - Lesson 7: Hack Analysis: Nomad Bridge, August 2022 ( [English](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/en/) | [中文](https://github.com/SunWeb3Sec/DeFiHackLabs/tree/main/academy/onchain_debug/07_Analysis_nomad_bridge/) )
 
 ## List of Past DeFi Incidents
+
+[20240221 DeezNutz404](#20240221-deeznutz-404---lack-of-validation)
+
+[20240221 GAIN](#20240221-GAIN---bad-function-implementation)
 
 [20240219 RuggedArt](#20240219-RuggedArt---reentrancy)
 
@@ -778,7 +782,43 @@ All articles are also published on [Substack](https://defihacklabs.substack.com/
 
 ### List of DeFi Hacks & POCs
 
-### 20240219 RuggedArte - reentrancy
+### 20240221 DeezNutz 404 - lack of validation
+
+### Lost: ~170k
+
+```
+forge test --contracts ./src/test/DeezNutz404_exp.sol -vvv
+```
+
+#### Contract
+
+[DeezNutz404_exp.sol](src/test/DeezNutz404_exp.sol)
+
+#### Link reference
+
+https://twitter.com/0xNickLFranklin/status/1760481343161700523
+
+---
+
+### 20240221 GAIN - bad function implementation
+
+### Lost: ~6.4 ETH
+
+```
+forge test --contracts ./src/test/GAIN_exp.sol -vvv
+```
+
+#### Contract
+
+[GAIN_exp.sol](src/test/GAIN_exp.sol)
+
+#### Link reference
+
+https://twitter.com/0xNickLFranklin/status/1760559768241160679
+
+---
+
+### 20240219 RuggedArt - reentrancy
 
 ### Lost: ~10k
 
