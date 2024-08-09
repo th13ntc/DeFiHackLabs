@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-508 incidents included.
+514 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -47,6 +47,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+
+[20240806 Novax](#20240806-Novax---price-manipulation)
 
 [20240801 Convergence](#20240801-Convergence---incorrect-input-validation)
 
@@ -184,6 +186,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240401 OpenLeverage](#20240401-openleverage---reentrancy)
 
+[20240329 ETHFIN](#20240329-ethfin---price-manipulation)
+
 [20240329 PrismaFi](#20240329-prismaFi---insufficient-validation)
 
 [20240328 LavaLending](#20240328-lavalending---business-logic-flaw)
@@ -245,6 +249,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20240215 Babyloogn](#20240215-Babyloogn---reentrancy)
 
 [20240215 Miner](#20240215-Miner---lack-of-validation-dst-address)
+
+[20240213 MINER BSC](#20240213-miner---price-manipulation)
 
 [20240211 Game](#20240211-game---reentrancy--business-logic-flaw)
 
@@ -317,6 +323,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20231214 PHIL](past/2023/README.md#20231214-PHIL---business-logic-flaw)
 
 [20231213 HYPR](past/2023/README.md#20231213-hypr---business-logic-flaw)
+
+[20231211 GoodCompound](past/2023/README.md#20231211-goodcompound---price-manipulation)
 
 [20231207 HNet](past/2023/README.md#20231207-HNet---business-logic-flaw)
 
@@ -862,6 +870,10 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20220824 LuckyTiger NFT](past/2022/README.md#20220824-luckytiger-nft---predicting-random-numbers)
 
+[20220816 Circle_2](past/2022/README.md#20220816-circle---price-manipulation)
+
+[20220813 Circle](past/2022/README.md#20220813-circle---price-manipulation)
+
 [20220810 XSTABLE Protocol](past/2022/README.md#20220810-xstable-protocol---incorrect-logic-check)
 
 [20220809 ANCH](past/2022/README.md#20220809-anch---skim-token-balance)
@@ -1099,6 +1111,25 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ---
 
 ### List of DeFi Hacks & POCs
+
+
+### 20240806 Novax - Price Manipulation
+
+### Lost: ~25K USD
+
+```sh
+forge test --contracts ./src/test/2024-08/NovaXM2E_exp.sol -vvv
+```
+
+#### Contract
+
+[NovaXM2E_exp.sol](src/test/2024-08/NovaXM2E_exp.sol)
+
+### Link reference
+
+https://x.com/EXVULSEC/status/1820676684410147276
+
+---
 
 ### 20240801 Convergence - Incorrect input validation
 
@@ -2310,6 +2341,22 @@ https://twitter.com/0xNickLFranklin/status/1774727539975672136
 
 ---
 
+### 20240329 ETHFIN - Price Manipulation
+
+### Lost: ~$1.24K (2.13 BNB)
+
+
+```sh
+forge test --contracts ./src/test/2024-03/ETHFIN_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[ETHFIN_exp.sol](src/test/2024-03/ETHFIN_exp.sol)
+### Link reference
+
+https://app.blocksec.com/explorer/tx/bsc/0xfe031685d84f3bae1785f5b2bd0ed480b87815c3f23ce6ced73b8573b7e367c6
+
+---
+
 ### 20240329 PrismaFi - Insufficient Validation
 
 ### Lost: $~11M
@@ -2876,6 +2923,22 @@ forge test --contracts ./src/test/2024-02/Miner_exp.sol -vvv --evm-version shang
 #### Link reference
 
 https://twitter.com/Phalcon_xyz/status/1757777340002681326
+
+---
+
+### 20240213 MINER - Price Manipulation
+
+### Lost: ~3.5 WBNB
+
+
+```sh
+forge test --contracts ./src/test/2024-02/MINER_bsc_exp.sol -vvv --evm-version shanghai
+```
+#### Contract
+[MINER_bsc_exp.sol](src/test/2024-02/MINER_bsc_exp.sol)
+### Link reference
+
+https://app.blocksec.com/explorer/tx/bsc/0x15ab671c9bf918fa4b6a9eed9ccb527f32aca40e926ede2aec2c84dfa9c30512?line=6
 
 ---
 
