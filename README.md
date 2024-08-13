@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-514 incidents included.
+517 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -48,6 +48,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+
+[20240812 iVest](#20240812-iVest---business-logic-flaw)
 
 [20240806 Novax](#20240806-Novax---price-manipulation)
 
@@ -301,6 +303,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 <details> <summary> 2023 </summary>
 
+[20231231 Channels BUSD&USDC](past/2023/README.md#20231231-channels---price-manipulation)
+
 [20231230 ChannelsFinance](past/2023/README.md#20231230-channelsfinance---compoundv2-inflation-attack)
 
 [20231228 CCV](past/2023/README.md#20231225-CCV---precision-loss)
@@ -312,6 +316,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20231222 PineProtocol](past/2023/README.md#20231222-pineprotocol---business-logic-flaw)
 
 [20231220 TransitFinance](past/2023/README.md#20231220-transitfinance---lack-of-validation-pool)
+
+[20231217 Bob](past/2023/README.md#20231217-bob---price-manipulation)
 
 [20231217 FloorProtocol](past/2023/README.md#20231217-floorprotocol---business-logic-flaw)
 
@@ -1112,6 +1118,24 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 ---
 
 ### List of DeFi Hacks & POCs
+
+### 20240812 iVest - Business logic flaw
+
+### Lost: ~338 WBNB
+
+```sh
+forge test --contracts src/test/2024-08/IvestDao_exp.sol -vvv
+```
+
+#### Contract
+
+[IvestDao_exp.sol](src/test/2024-08/IvestDao_exp.sol)
+
+### Link reference
+
+https://x.com/AnciliaInc/status/1822870201698050064
+
+---
 
 
 ### 20240806 Novax - Price Manipulation
