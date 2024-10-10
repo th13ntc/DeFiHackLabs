@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-531 incidents included.
+533 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -49,9 +49,13 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ## List of Past DeFi Incidents
 
+[20241006 SASHAToken](#20241006-sashatoken---price-manipulation)
+
 [20241005 AIZPTToken](#20241005-AIZPTToken---wrong-price-calculation)
 
 [20241002 LavaLending](#20241002-LavaLending---price-manipulation)
+
+[20241001 FireToken](#20241001-firetoken---pair-manipulation-with-transfer-function)
 
 [20240926 OnyxDAO](#20240926-OnyxDAO---fake-market)
 
@@ -62,7 +66,6 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20240923 Bankroll_Network](#20240923-Bankroll_Network---incorrect-input-validation)
 
 [20240913 OTSeaStaking](#20240913-OTSeaStaking---Logic-Flaw)
-
 
 [20240910 Caterpillar_Coin_CUT](#20240910-Caterpillar_Coin_CUT---price-manipulation)
 
@@ -1148,6 +1151,21 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20241006 SASHAToken - Price Manipulation
+
+### Total Lost : ~249 ETH (~$600K USD)
+
+```
+forge test --contracts ./src/test/2024-10/SASHAToken_exp.sol -vvv
+```
+
+#### Contract
+
+[SASHAToken_exp.sol](src/test/2024-10/SASHAToken_exp.sol)
+
+### Link reference
+
+https://x.com/0xNickLFranklin/status/1842864840265883833
 
 ### 20241005 AIZPTToken - Wrong Price Calculation
 
@@ -1164,6 +1182,24 @@ forge test --contracts ./src/test/2024-10/AIZPTToken_exp.sol -vvv
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1842576732047700077
+
+---
+
+### 20241001 FireToken - Pair Manipulation With Transfer Function
+
+### Lost: 8.45 ETH (~$20K USD)
+
+```sh
+forge test --contracts ./src/test/2024-10/FireToken_exp.sol -vvv
+```
+
+#### Contract
+
+[FireToken_exp.sol](src/test/2024-10/FireToken_exp.sol)
+
+### Link reference
+
+https://twitter.com/0xNickLFranklin/status/1841305965750350089
 
 ---
 
