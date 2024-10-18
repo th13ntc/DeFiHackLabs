@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-535 incidents included.
+536 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -52,6 +52,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20241013 MorphoBlue](#20241013-morphoblue---overpriced-asset-in-oracle)
 
 [20241011 P719Token](#20241011-p719token---price-manipulation-inflate-attack)
+
+[20241006 HYDT](#20241010-hydt---oracle-price-manipulation)
 
 [20241006 SASHAToken](#20241006-sashatoken---price-manipulation)
 
@@ -199,7 +201,7 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 [20240415 GFA](#20240415-gfa---business-logic-flaw)
 
-[20240415 Chainge](#20240415-chainge---input-validation)
+[20240415 ChaingeFinance](#20240415-chaingeFinance---arbitrary-external-call)
 
 [20240414 Hackathon](#20240414-hackathon---business-logic-flaw)
 
@@ -1210,6 +1212,25 @@ https://x.com/0xNickLFranklin/status/1842864840265883833
 
 ---
 
+
+### 20241010 HYDT - Oracle Price Manipulation
+
+### Total Lost : 5.8k USDT
+
+```
+forge test --contracts ./src/test/2024-10/HYDT_exp.sol -vvv --evm-version cancun
+```
+
+#### Contract
+
+[HYDT_exp.sol](src/test/2024-10/HYDT_exp.sol)
+
+### Link reference
+
+https://x.com/TenArmorAlert/status/1844241843518951451
+
+---
+
 ### 20241005 AIZPTToken - Wrong Price Calculation
 
 ### Total Lost : 34.88 BNB (~$20K USD)
@@ -1402,11 +1423,12 @@ post-morten: https://x.com/Penpiexyz_io/status/1831462760787452240
 
 ### Lost: 52000
 
-
 ```sh
 forge test --match-contract AAVE_Repay_Adapter -vvv
 ```
+
 #### Contract
+
 [AAVE_Repay_Adapter.sol](src/test/2024-08/AAVE_Repay_Adapter.sol)
 
 ### Link reference
@@ -2495,17 +2517,17 @@ https://x.com/ChainAegis/status/1779809931962827055
 
 ---
 
-### 20240415 Chainge - Input Validation
+### 20240415 ChaingeFinance - Arbitrary External Call 
 
-### Lost: ~200K
+### Lost: ~560K
 
 ```sh
-forge test --match-contract Chainge_exp -vvv
+forge test --match-contract ChaingeFinance_exp -vvv
 ```
 
 #### Contract
 
-[Chainge_exp.sol](src/test/2024-04/Chainge_exp.sol)
+[ChaingeFinance_exp.sol](src/test/2024-04/ChaingeFinance_exp.sol)
 
 ### Link reference
 
