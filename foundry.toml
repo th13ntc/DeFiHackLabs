@@ -2,6 +2,7 @@
 src = 'src'
 out = 'out'
 libs = ['lib']
+fs_permissions = [{ access = "read", path = "./"}]
 
 [rpc_endpoints]
 mainnet = "https://rpc.ankr.com/eth"
@@ -17,7 +18,7 @@ polygon = "https://rpc.ankr.com/polygon"
 celo = "https://rpc.ankr.com/celo"
 Base = "https://developer-access-mainnet.base.org"
 
-# See more config options https://github.com/gakonst/foundry/tree/master/config
+# See more config options https://github.com/foundry-rs/foundry/tree/master/.config
 
 [fmt]
 line_length = 120
@@ -32,3 +33,6 @@ single_line_statement_blocks = 'preserve'
 variable_override_spacing = true
 wrap_comments = false
 ignore = []
+
+
+

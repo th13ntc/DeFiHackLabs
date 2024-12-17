@@ -2,7 +2,7 @@
 
 **Reproduce DeFi hack incidents using Foundry.**
 
-539 incidents included.
+542 incidents included.
 
 Let's make Web3 secure! Join [Discord](https://discord.gg/Fjyngakf3h)
 
@@ -48,6 +48,10 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 - [Giveth](https://giveth.io/donate/defihacklabs)
 
 ## List of Past DeFi Incidents
+[20241119 PolterFinance](#20241119-polterfinance---flashloan-attack)
+
+[20241111 DeltaPrime](#20241111-deltaprime---reentrancy)
+
 [20241026 CompoundFork](#20241026-compoundfork---flashloan-attack)
 
 [20241022 Erc20transfer](#20241022-erc20transfer---access-control)
@@ -133,6 +137,8 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 [20240611 Crb2](#20240616-Crb2---business-logic-flaw)
 
 [20240611 JokInTheBox](#20240611-JokInTheBox---business-logic-flaw)
+
+[20240610 UwuLend - Price Manipulation](#20240610-UwuLend---Price-Manipulation)
 
 [20240610 Bazaar](#20240610-bazaar---insufficient-permission-check)
 
@@ -1164,11 +1170,37 @@ If you appreciate our work, please consider donating. Even a small amount helps 
 
 ### List of DeFi Hacks & POCs
 
+### 20241119 PolterFinance - FlashLoan Attack
+
+### Lost: $7M
 
 
+```sh
+forge test --contracts ./src/test/2024-11/PolterFinance_exploit.sol -vvv
+```
+#### Contract
+[PolterFinance_exploit.sol](src/test/2024-11/PolterFinance_exploit.sol)
+### Link reference
+
+https://twitter.com/Bcpaintball26/status/1857865758551805976
+
+---
+
+### 20241111 DeltaPrime - Reentrancy
+
+### Lost: $4.75 M
 
 
+```sh
+forge test --contracts ./src/test/2024-11/DeltaPrime_exp.sol -vvv
+```
+#### Contract
+[DeltaPrime_exp.sol](src/test/2024-11/DeltaPrime_exp.sol)
+### Link reference
 
+https://x.com/peckshield/status/1855910524460159197
+
+---
 
 ### 20241026 CompoundFork - Flashloan attack
 
@@ -1182,7 +1214,8 @@ forge test --contracts ./src/test/2024-10/CompoundFork_exploit.sol -vvv --evm-ve
 [CompoundFork_exploit.sol](src/test/2024-10/CompoundFork_exploit.sol)
 ### Link reference
 
-https://x.com/Phalcon_xyz/status/1849636437349527725,https://app.blocksec.com/explorer/tx/base/0x6ab5b7b51f780e8c6c5ddaf65e9badb868811a95c1fd64e86435283074d3149e
+https://x.com/Phalcon_xyz/status/1849636437349527725
+https://app.blocksec.com/explorer/tx/base/0x6ab5b7b51f780e8c6c5ddaf65e9badb868811a95c1fd64e86435283074d3149e
 
 ---
 
@@ -1934,6 +1967,30 @@ forge test --match-contract JokInTheBox_exp -vvv --evm-version cancun
 ### Link reference
 
 https://x.com/0xNickLFranklin/status/1800355604692910571
+
+---
+
+### 20240610 UwULend - Price Manipulation
+
+### Lost: 19.3M
+
+```sh
+forge test --contracts ./src/test/2024-06/UwuLend_First_exp.sol -vvv --evm-version shanghai
+```
+
+```sh
+forge test --contracts ./src/test/2024-06/UwuLend_Second_exp.sol -vvv --evm-version shanghai
+```
+
+#### Contract
+
+[UwuLend_First_exp.sol](src/test/2024-06/UwuLend_First_exp.sol)
+
+[UwuLend_Second_exp.sol](src/test/2024-06/UwuLend_Second_exp.sol)
+
+### Link reference
+
+https://x.com/peckshield/status/1800176089316163831
 
 ---
 
