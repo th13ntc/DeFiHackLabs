@@ -17,3 +17,8 @@ jobs:
           owner: SunWeb3Sec
           base: main
           head: main
+          ignore_fail: true
+          auto_approve: false
+          auto_merge: true
+          retries: 4
+          retry_after: 60
